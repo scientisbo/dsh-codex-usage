@@ -20,5 +20,24 @@
   "dependencies": {
     "@openai/codex": "0.147.0"
   },
+  "author": "scientisbo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scientisbo/dsh-codex-usage.git"
+  },
+  "homepage": "https://github.com/scientisbo/dsh-codex-usage#readme",
+  "bugs": {
+    "url": "https://github.com/scientisbo/dsh-codex-usage/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "codex",
+    "chatgpt",
+    "usage",
+    "quota",
+    "balance"
+  ],
   "license": "MIT"
 }
