@@ -1,0 +1,24 @@
+{
+  "name": "dsh-codex-usage",
+  "version": "0.1.0",
+  "description": "Codex 订阅配额 + DeepSeek 余额聚合 host 插件：GET /api/dsh-usage/overview（回环-only，5 分钟缓存）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@openai/codex": "0.147.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+# Codex 订阅配额 + DeepSeek 余额聚合（host 侧）。
+# 只读回环接口：GET /api/dsh-usage/overview（5 分钟内存缓存；?refresh=1 强制刷新）
+- insert:
+    - id: codex-usage
+      name: dsh-codex-usage
