@@ -113,12 +113,16 @@ GET /api/dsh-usage/overview
 ## 与 Codex 子代理的关系（别搞混）
 
 - **"用 Codex 干活"**（把任务委派出去 / 发布 subagent）：这是**官方插件**
-  `@deepseek-ai/dsh-subagent-codex` 的事——安装后 DSH 里出现 `subagent_codex`
-  工具，由它把任务交给 Codex 执行（需 ChatGPT 账号 `codex login`）；
+  `@deepseek-ai/dsh-subagent-codex` 的事——一条命令装上：
+  `dsh plugin --profile web add @deepseek-ai/dsh-subagent-codex`，
+  之后 DSH 里出现 `subagent_codex` 工具，由它把任务交给 Codex 执行
+  （需 ChatGPT 账号先 `codex login`）。该插件由 deepseek-ai 官方维护，
+  **不随本仓库分发**；
 - **"看 Codex 用了多少"**（本插件）：只通过 app-server 的 `account/read` +
   `account/rateLimits/read` 读配额，**不发布任何任务、不参与调用**；
-- 组合玩法：Plus 账号装好官方子代理干活，再用本插件盯着配额，才不会刷爆
-  5h / 7d 限流窗口。
+- 组合玩法：如果你想用 ChatGPT Plus 账号分担日常工作，先装官方子代理去
+  **干活**，再用本插件**盯着配额**——5h / 7d 滚动窗口用了多少、多久重置，
+  一目了然，不会刷爆限流。
 
 ## 搭配 DeepSeek 用量面板
 
